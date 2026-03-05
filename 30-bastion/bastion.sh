@@ -4,6 +4,7 @@
 #remaining 30GB we need to extend using below commands
 growpart /dev/nvme0n1 4
 lvextend -r -L+30G /dev/mapper/RootVG-homeVol
+pvresize /dev/nvme0n1p4
 xfs_growfs /home
 
 yum install -y yum-utils
