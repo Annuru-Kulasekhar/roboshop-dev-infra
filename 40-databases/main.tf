@@ -1,4 +1,4 @@
-/* resource "aws_instance" "mongodb" {
+ resource "aws_instance" "mongodb" {
   ami           = local.ami_id
   instance_type = "t3.micro"
   subnet_id = local.database_subnet_id
@@ -117,7 +117,7 @@ resource "terraform_data" "bootstrap_mysql" {
         "sudo sh /tmp/bootstrap.sh mysql"
     ]
   }
-} */
+} 
 
 resource "aws_instance" "rabbitmq" {
   ami           = local.ami_id
