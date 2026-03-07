@@ -24,10 +24,4 @@ locals {
             for name in ["${var.project}","${var.environment}","rabbitmq"] : title(name)
         ])
 
-    databases = {
-        mongodb = local.mongodb_sg_id
-        redis   = local.redis_sg_id
-        mysql  = local.mysql_sg_id
-        rabbitmq  = local.rabbitmq_sg_id
-    }
 }
