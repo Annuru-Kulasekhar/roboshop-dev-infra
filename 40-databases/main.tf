@@ -119,7 +119,7 @@ resource "terraform_data" "bootstrap_mysql" {
   }
 } 
 
-resource "aws_instance" "rabbitmq" {
+/* resource "aws_instance" "rabbitmq" {
   ami           = local.ami_id
   instance_type = "t3.micro"
   subnet_id = local.database_subnet_id
@@ -159,3 +159,4 @@ resource "terraform_data" "bootstrap_rabbitmq" {
   }
 }
 
+ */
