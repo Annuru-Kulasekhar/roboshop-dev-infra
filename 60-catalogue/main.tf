@@ -150,7 +150,12 @@ resource "aws_autoscaling_group" "catalogue" {
   }
 
   dynamic tag {
-    for_each = var.tags
+    for_each = merge ( 
+    { 
+        Name = "${var.project}-${var.environment}-catalogue" 
+    }, 
+    local.common_tags 
+  )
     content  {
       key                 = tag.key
       value               = tag.value

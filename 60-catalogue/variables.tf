@@ -16,12 +16,3 @@ variable "domain_name" {
     default = "annuru.online"
 }
 
-variable "tags" {
-    type = map
-    default = merge ( 
-    { 
-        Name = "${var.project}-${var.environment}-catalogue" 
-    }, 
-    local.common_tags 
-  )
-}
